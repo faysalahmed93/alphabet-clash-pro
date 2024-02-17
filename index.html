@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,6 +85,7 @@
         <!-- keyboard end -->
         <!-- dollar-heart -->
         <div class="flex justify-between w-2/3">
+          <!-- life-score  -->
         <button class="btn bg-purple-500 rounded-full border-none px-5 text-white">
           life
       <img src="images/heart.svg" alt="">
@@ -95,8 +96,9 @@
               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
             />
           </svg>
-          <span>1</span>
+          <span id="life-score">3</span>
         </button>
+        <!-- score  -->
          <button class="btn bg-[#360490] rounded-full border-none px-5 text-white">
          score
       <img src="images/dollar.svg" alt="">
@@ -107,7 +109,7 @@
               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
             />
           </svg>
-          <span>1</span>
+          <span id="game-score">0</span>
         </button>
         </div>
         </div>
@@ -115,8 +117,13 @@
       <!-- score -->
       <section id="score-section" class=" hidden flex flex-col justify-center items-center min-h-screen ">
         <div class=" bg-[#FFFFFF33] space-y-6 text-center px-8 py-4 rounded-lg text-white">
-            <h1 class="text-6xl">Score :</h1>
-            <button class="btn text-black text-2xl font-medium">Play Again</button>
+         
+            <h4 class="text-3xl">Game Over</h4>
+             <h1 class="text-6xl">
+            <span class="font-extrabold">Score :</span>
+            <span id="last-score">0</span>
+            </h1>
+            <button onclick="play()" class="btn text-black text-2xl font-medium">Play Again</button>
             <p class="text-xl">Practice will make you Pro</p>
         </div>
       </section>
